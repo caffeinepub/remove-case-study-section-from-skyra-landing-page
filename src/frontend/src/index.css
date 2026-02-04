@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* SKYRA Brand Colors - Light Mode (Light Blue + Beige Palette) */
+        --background: 0.98 0.01 70;
+        --foreground: 0.2 0 0;
+        
+        /* Light Blue - Primary accent */
+        --skyra-blue: 0.6 0.18 235;
+        
+        /* Beige - Secondary/warm neutral */
+        --skyra-beige: 0.88 0.05 65;
+        
+        /* Soft Green - Tertiary accent (reduced prominence) */
+        --skyra-green: 0.65 0.12 150;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.2 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0 0;
+        
+        --primary: 0.6 0.18 235;
+        --primary-foreground: 1 0 0;
+        
+        --secondary: 0.88 0.05 65;
+        --secondary-foreground: 0.2 0 0;
+        
+        --muted: 0.94 0.02 70;
+        --muted-foreground: 0.5 0 0;
+        
+        --accent: 0.6 0.18 235;
+        --accent-foreground: 1 0 0;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 1 0 0;
+        
+        --border: 0.9 0.02 70;
+        --input: 0.9 0.02 70;
+        --ring: 0.6 0.18 235;
+        
+        --success: 0.65 0.12 150;
+        --success-foreground: 1 0 0;
+    }
+
+    .dark {
+        --background: 0.15 0 0;
+        --foreground: 0.95 0 0;
+        
+        --card: 0.2 0 0;
+        --card-foreground: 0.95 0 0;
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.95 0 0;
+        
+        --primary: 0.7 0.18 235;
+        --primary-foreground: 0.15 0 0;
+        
+        --secondary: 0.82 0.05 65;
+        --secondary-foreground: 0.15 0 0;
+        
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        
+        --accent: 0.7 0.18 235;
+        --accent-foreground: 0.15 0 0;
+        
+        --destructive: 0.6 0.22 25;
+        --destructive-foreground: 0.95 0 0;
+        
+        --border: 0.3 0 0;
+        --input: 0.3 0 0;
+        --ring: 0.7 0.18 235;
+        
+        --success: 0.7 0.12 150;
+        --success-foreground: 0.15 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    /* Unified card/container surfaces */
+    .skyra-card {
+        @apply bg-card rounded-2xl border border-border shadow-sm;
+    }
+    
+    .skyra-card-hover {
+        @apply skyra-card hover:shadow-lg transition-shadow duration-300;
+    }
+    
+    /* Primary button */
+    .skyra-btn-primary {
+        @apply px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium;
+        @apply hover:opacity-90 transition-all duration-200;
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+        @apply disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+    
+    /* Secondary button */
+    .skyra-btn-secondary {
+        @apply px-8 py-4 bg-card text-primary border-2 border-primary rounded-full font-medium;
+        @apply hover:bg-primary/5 transition-all duration-200;
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+        @apply disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+    
+    /* Text link */
+    .skyra-link {
+        @apply text-primary hover:underline transition-colors;
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded;
+    }
+    
+    /* Icon container */
+    .skyra-icon-container {
+        @apply rounded-xl bg-primary/10 flex items-center justify-center;
+    }
+    
+    /* Section gradient backgrounds */
+    .skyra-gradient-blue-beige {
+        @apply bg-gradient-to-br from-secondary/20 to-primary/10;
+    }
+    
+    .skyra-gradient-beige-blue {
+        @apply bg-gradient-to-br from-primary/10 to-secondary/20;
+    }
+}
+
+@layer utilities {
+    .text-skyra-green {
+        color: oklch(var(--skyra-green));
+    }
+    
+    .bg-skyra-green {
+        background-color: oklch(var(--skyra-green));
+    }
+    
+    .text-skyra-blue {
+        color: oklch(var(--skyra-blue));
+    }
+    
+    .bg-skyra-blue {
+        background-color: oklch(var(--skyra-blue));
+    }
+    
+    .text-skyra-beige {
+        color: oklch(var(--skyra-beige));
+    }
+    
+    .bg-skyra-beige {
+        background-color: oklch(var(--skyra-beige));
+    }
+    
+    .text-success {
+        color: oklch(var(--success));
+    }
+    
+    .bg-success {
+        background-color: oklch(var(--success));
+    }
+}

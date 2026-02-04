@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 31,
+  "summary": "Skyra landing-page web app scaffold with Motoko backend and React+Vite frontend; landing page content updated with product offerings section, refreshed build-template/tooling, and integrated Skyra logo/favicon assets with improved logo rendering.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko backend canister scaffold with authorization and access control",
+      "synonyms": [
+        "backend scaffold",
+        "motoko core",
+        "authorization mixin",
+        "access control"
+      ],
+      "description": "Introduces backend canister entrypoint plus reusable authorization mixin and access-control module to gate backend functionality.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React + Vite frontend scaffold (build-template aligned)",
+      "synonyms": [
+        "frontend scaffold",
+        "vite app",
+        "react template"
+      ],
+      "description": "Sets up a React/Vite frontend with shared build-template configuration (workspace/package tooling, lint rules, env/config, and TS config) and backend type bindings.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Skyra landing page UI with structured sections",
+      "synonyms": [
+        "landing page",
+        "SkyraLandingPage",
+        "marketing site"
+      ],
+      "description": "Implements a Skyra marketing/landing page composed of multiple sections (hero, problem, what/why Skyra, how it works, applications, case study, sustainability/ESG, future vision, footer, CTA) and top navigation.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Internet Identity integration hooks",
+      "synonyms": [
+        "II",
+        "auth hooks",
+        "useInternetIdentity"
+      ],
+      "description": "Adds frontend hooks/utilities to support Internet Identity authentication and actor creation for backend calls.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Contact form component and submission hook",
+      "synonyms": [
+        "ContactForm",
+        "useSubmitContactForm"
+      ],
+      "description": "Adds a contact form UI component and a hook for submitting form data, with supporting storage/url parameter utilities.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "shadcn-ui component library integrated",
+      "synonyms": [
+        "shadcn",
+        "ui primitives"
+      ],
+      "description": "Adds a broad set of shadcn-ui components and related frontend configuration (components.json, Tailwind/PostCSS setup, ESLint rules).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Asset pipeline and generated brand/hero images",
+      "synonyms": [
+        "generated images",
+        "image tooling"
+      ],
+      "description": "Adds build scripts to prune/resize images and includes generated Skyra visual assets used by the landing page.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Products/offerings section added to Skyra landing page",
+      "synonyms": [
+        "ProductsSection",
+        "product offerings",
+        "pricing/products content"
+      ],
+      "description": "Adds a dedicated ProductsSection component and wires it into the Skyra landing page content flow to present additional product offerings.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Site branding assets integrated (logo mark, logo, favicon)",
+      "synonyms": [
+        "logo integration",
+        "favicon",
+        "brand assets"
+      ],
+      "description": "Adds generated logo assets (logo, logo mark, favicon) to frontend/public/assets/generated and integrates branding into the app where applicable.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-10",
+      "title": "Logo rendering/background corrected for clean site display",
+      "synonyms": [
+        "transparent logo background",
+        "logo cleanup",
+        "branding fix"
+      ],
+      "description": "Updates the generated Skyra logo asset(s) and related frontend styling/markup so the site logo renders cleanly without an undesirable background artifact.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-top-navigation-branding-so-the-upper-left-brand-area-displays-the-text-skyra-and-removes-the-logo-image-no-assets-generated-skyra-logo-dim-512x512-png-in-the-navbar-keep-the-existing-click-to-scroll-to-top-behavior-on-the-brand-area",
+      "title": "Update the top navigation branding so the upper-left brand area displays the text “Skyra” and removes the logo image (no `/assets/generated/skyra-logo.dim_512x512.png` in the navbar). Keep the existing click-to-scroll-to-top behavior on the brand area.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-hero-background-image-overlay-with-a-new-outdoor-metro-station-photo-featuring-visible-tiles-instead-of-the-current-tiles-pattern-image",
+      "title": "Replace the hero background image overlay with a new outdoor metro station photo featuring visible tiles (instead of the current tiles pattern image).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-applications-section-card-images-so-1-metro-railway-stations-uses-an-outdoor-metro-station-photo-featuring-tiles-and-2-public-buildings-walls-facades-and-urban-furniture-each-use-their-own-distinct-photos-not-the-shared-tiles-pattern",
+      "title": "Update the Applications section card images so: (1) “Metro & Railway Stations” uses an outdoor metro station photo featuring tiles, and (2) “Public Buildings”, “Walls & Facades”, and “Urban Furniture” each use their own distinct photos (not the shared tiles pattern).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-generated-images-to-frontend-public-assets-generated-and-reference-them-directly-from-the-react-components-no-backend-routing-for-images",
+      "title": "Add the new generated images to `frontend/public/assets/generated` and reference them directly from the React components (no backend routing for images).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Replace header branding: remove logo image and display 'Skyra' text on the upper-left (navbar/hero)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update Applications imagery: use an outdoor metro station photo featuring tiles, and add/replace images for Public Buildings, Walls & Facades, and Urban Furniture cards/sections",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Backend is a Motoko canister with shared authorization mixin and access-control module for gating operations.",
+    "Frontend is a React + Vite TypeScript app aligned with the build-template workspace/tooling.",
+    "UI layer uses shadcn-ui components with TailwindCSS/PostCSS and custom ESLint rules (e.g., Internet Identity provider enforcement).",
+    "Frontend integrates Internet Identity via dedicated hooks and uses generated backend declaration bindings for actor calls.",
+    "Project includes image maintenance scripts (prune/resize) and ships pre-generated marketing assets in frontend/public/assets/generated.",
+    "Branding assets (logo mark/logo/favicon) are now included under frontend/public/assets/generated and used by the frontend for site identity.",
+    "Build-template workspace/tooling files were refreshed across backend/frontend scaffolding (Dockerfile, scripts, configs, shadcn-ui component set)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Outdoor metro station scene with visible tiling (skyra-hero-metro-station.dim_1600x900.png)\n- Outdoor metro station scene with visible tiling, framed for a 4:3 card crop (skyra-application-metro-outdoor.dim_1400x900.png)\n- Public building exterior with architectural facade detail (skyra-application-public-buildings.dim_1400x900.png)\n- Urban wall/facade surface detail suitable for a vertical-surface concept (skyra-application-walls-facades.dim_1400x900.png)\n- Urban street furniture scene (bench/planter/street fixture) in a clean city environment (skyra-application-urban-furniture.dim_1400x900.png)",
+  "generatedImages": [
+    {
+      "filename": "skyra-hero-metro-station.dim_1600x900.png",
+      "description": "Outdoor metro station scene with visible tiling",
+      "targetWidth": 1600,
+      "targetHeight": 900
+    },
+    {
+      "filename": "skyra-application-metro-outdoor.dim_1400x900.png",
+      "description": "Outdoor metro station scene with visible tiling, framed for a 4:3 card crop",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    },
+    {
+      "filename": "skyra-application-public-buildings.dim_1400x900.png",
+      "description": "Public building exterior with architectural facade detail",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    },
+    {
+      "filename": "skyra-application-walls-facades.dim_1400x900.png",
+      "description": "Urban wall/facade surface detail suitable for a vertical-surface concept",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    },
+    {
+      "filename": "skyra-application-urban-furniture.dim_1400x900.png",
+      "description": "Urban street furniture scene (bench/planter/street fixture) in a clean city environment",
+      "targetWidth": 1400,
+      "targetHeight": 900
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Update Skyra header branding and refresh application imagery with metro/buildings/facades/furniture photos",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

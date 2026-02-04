@@ -1,0 +1,86 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T06:43:43.690Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Update the top navigation branding so the upper-left brand area displays the text “Skyra” and removes the logo image (no `/assets/generated/skyra-logo.dim_512x512.png` in the navbar). Keep the existing click-to-scroll-to-top behavior on the brand area.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/skyra/TopNav.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/skyra/TopNav.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Replace the hero background image overlay with a new outdoor metro station photo featuring visible tiles (instead of the current tiles pattern image).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/skyra/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/skyra/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Update the Applications section card images so: (1) “Metro & Railway Stations” uses an outdoor metro station photo featuring tiles, and (2) “Public Buildings”, “Walls & Facades”, and “Urban Furniture” each use their own distinct photos (not the shared tiles pattern).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/skyra/ApplicationsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/skyra/ApplicationsSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add the new generated images to `frontend/public/assets/generated` and reference them directly from the React components (no backend routing for images).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png",
+          "frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png",
+          "frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png",
+          "frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png",
+    "frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png",
+    "frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png",
+    "frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png",
+    "frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png",
+    "frontend/src/components/skyra/ApplicationsSection.tsx",
+    "frontend/src/components/skyra/HeroSection.tsx",
+    "frontend/src/components/skyra/TopNav.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

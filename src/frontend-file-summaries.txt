@@ -1,0 +1,22 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the single-page SKYRA landing page.",
+  "frontend/src/pages/SkyraLandingPage.tsx": "Container page component assembling all sections including the new Products and AQI Science Explainer sections in the landing page layout.",
+  "frontend/src/components/skyra/TopNav.tsx": "Fixed navigation bar with text-only \"Skyra\" brand (no logo image) on the upper-left, smooth-scroll functionality to all sections, and unified hover/focus states with consistent interactive styling.",
+  "frontend/src/components/skyra/HeroSection.tsx": "Hero section with updated metro station background image and CTA buttons using unified button classes aligned to the light blue + beige palette.",
+  "frontend/src/components/skyra/ProblemSection.tsx": "Problem section with three challenge cards using consistent surface treatments and icon containers aligned to the updated palette.",
+  "frontend/src/components/skyra/WhatIsSkyraSection.tsx": "Section explaining SKYRA technology with harmonized gradient backgrounds and image container styling matching the updated palette.",
+  "frontend/src/components/skyra/HowItWorksSection.tsx": "How It Works section with standardized step icons, connector lines, and architecture diagram container using unified surface treatments.",
+  "frontend/src/components/skyra/WhySkyraSection.tsx": "Benefits section with six value propositions using consistent card surfaces and icon treatments aligned to the updated palette.",
+  "frontend/src/components/skyra/ApplicationsSection.tsx": "Applications grid with six use cases now using distinct images for Metro & Railway Stations (outdoor metro), Public Buildings, Walls & Facades, and Urban Furniture, with unified card hover states and surface styling.",
+  "frontend/src/components/skyra/SustainabilityESGSection.tsx": "ESG impact section with five sustainability points using unified card surfaces and icon treatments matching the updated palette.",
+  "frontend/src/components/skyra/CaseStudySection.tsx": "Structured case study layout with 6 fields (location, objective, installation, measurement method, outcome, why it matters) in clean card format, avoiding medical language.",
+  "frontend/src/components/skyra/FutureVisionSection.tsx": "Future vision section with three scalability points using consistent card styling and icon containers aligned to the updated palette.",
+  "frontend/src/components/skyra/BottomCTASection.tsx": "Bottom CTA section with contact form embedded in a container using unified surface styling and gradient backgrounds.",
+  "frontend/src/components/skyra/ContactForm.tsx": "Contact form with standardized input focus states, unified button styling, and success/error states aligned to the updated palette.",
+  "frontend/src/components/skyra/Footer.tsx": "Footer with unified social icon button surfaces, link hover states, and border styling matching the updated light blue + beige palette.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React Query mutation hook that submits contact form data to the backend submitContactForm method.",
+  "frontend/src/index.css": "Global styles with updated OKLCH color system prioritizing light blue + beige palette, including reusable component classes for buttons, cards, icons, and gradients with consistent hover/focus states for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with updated color mappings aligned to the new light blue + beige palette CSS variables and additional shadow utilities.",
+  "frontend/src/components/skyra/ProductsSection.tsx": "Products section displaying three product lines (Roads, Transit, Buildings) with multiple tile variants per product, showing variant names and descriptions in a clean responsive grid layout.",
+  "frontend/src/components/skyra/AQIScienceExplainerSection.tsx": "Interactive AQI explainer with calculator slider and science cards using consistent surface treatments and focus states aligned to the updated palette."
+}

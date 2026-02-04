@@ -1,0 +1,79 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-top-navigation-branding-so-the-upper-left-brand-area-displays-the-text-skyra-and-removes-the-logo-image-no-assets-generated-skyra-logo-dim-512x512-png-in-the-navbar-keep-the-existing-click-to-scroll-to-top-behavior-on-the-brand-area",
+      "featureTitle": "Update the top navigation branding so the upper-left brand area displays the text “Skyra” and removes the logo image (no `/assets/generated/skyra-logo.dim_512x512.png` in the navbar). Keep the existing click-to-scroll-to-top behavior on the brand area.",
+      "files": [
+        "frontend/src/components/skyra/TopNav.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-hero-background-image-overlay-with-a-new-outdoor-metro-station-photo-featuring-visible-tiles-instead-of-the-current-tiles-pattern-image",
+      "featureTitle": "Replace the hero background image overlay with a new outdoor metro station photo featuring visible tiles (instead of the current tiles pattern image).",
+      "files": [
+        "frontend/src/components/skyra/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-applications-section-card-images-so-1-metro-railway-stations-uses-an-outdoor-metro-station-photo-featuring-tiles-and-2-public-buildings-walls-facades-and-urban-furniture-each-use-their-own-distinct-photos-not-the-shared-tiles-pattern",
+      "featureTitle": "Update the Applications section card images so: (1) “Metro & Railway Stations” uses an outdoor metro station photo featuring tiles, and (2) “Public Buildings”, “Walls & Facades”, and “Urban Furniture” each use their own distinct photos (not the shared tiles pattern).",
+      "files": [
+        "frontend/src/components/skyra/ApplicationsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-new-generated-images-to-frontend-public-assets-generated-and-reference-them-directly-from-the-react-components-no-backend-routing-for-images",
+      "featureTitle": "Add the new generated images to `frontend/public/assets/generated` and reference them directly from the React components (no backend routing for images).",
+      "files": [],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "build_request",
+  "title": "Update Skyra header branding and refresh application imagery with metro/buildings/facades/furniture photos",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the top navigation branding so the upper-left brand area displays the text “Skyra” and removes the logo image (no `/assets/generated/skyra-logo.dim_512x512.png` in the navbar). Keep the existing click-to-scroll-to-top behavior on the brand area.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "write skyra on upper left hand side remove the logo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/TopNav.tsx`, the logo `<img src=\"/assets/generated/skyra-logo.dim_512x512.png\" ...>` is removed from the navbar brand lockup.",
+        "The navbar brand area visibly shows the text “Skyra” on the upper-left on all screen sizes.",
+        "Clicking the brand area still scrolls the page to the top smoothly."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Replace the hero background image overlay with a new outdoor metro station photo featuring visible tiles (instead of the current tiles pattern image).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "use outdoor metro station picture with tiles"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/HeroSection.tsx`, the background overlay image no longer uses `/assets/generated/skyra-tiles-pattern.dim_1600x900.png` and uses the new generated metro-station image instead.",
+        "The hero section still renders correctly in light/dark modes with legible text over the new background image."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Update the Applications section card images so: (1) “Metro & Railway Stations” uses an outdoor metro station photo featuring tiles, and (2) “Public Buildings”, “Walls & Facades”, and “Urban Furniture” each use their own distinct photos (not the shared tiles pattern).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "use outdoor metro station picture with tiles",
+          "apply picture Public Buildings, Walls & Facades, Urban Furniture"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/ApplicationsSection.tsx`, the “Metro & Railway Stations” card image is updated to the new outdoor metro station tiles photo.",
+        "In `frontend/src/components/skyra/ApplicationsSection.tsx`, the “Public Buildings”, “Walls & Facades”, and “Urban Furniture” card images are updated to three distinct new images (not `/assets/generated/skyra-tiles-pattern.dim_1600x900.png`).",
+        "All application card images render without layout shifts and keep the same aspect ratio and hover behavior."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add the new generated images to `frontend/public/assets/generated` and reference them directly from the React components (no backend routing for images).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "use outdoor metro station picture with tiles",
+          "apply picture Public Buildings, Walls & Facades, Urban Furniture"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All new images are present under `frontend/public/assets/generated` with the exact filenames specified in imageRequirements.required.",
+        "The hero and applications sections load the new images via `/assets/generated/...` paths."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under `frontend/src/components/ui` (compose using them only).",
+    "Do not modify any files listed in `frontend.immutablePaths` from SYSTEM_CONTEXT.",
+    "Keep backend as a single Motoko actor; no backend changes are required for these UI/image updates."
+  ],
+  "nonGoals": [
+    "Do not add new landing page sections or change existing section order.",
+    "Do not remove or change the favicon or other existing branding assets unless explicitly required by the header change."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Outdoor metro station scene with visible tiling (skyra-hero-metro-station.dim_1600x900.png)",
+      "Outdoor metro station scene with visible tiling, framed for a 4:3 card crop (skyra-application-metro-outdoor.dim_1400x900.png)",
+      "Public building exterior with architectural facade detail (skyra-application-public-buildings.dim_1400x900.png)",
+      "Urban wall/facade surface detail suitable for a vertical-surface concept (skyra-application-walls-facades.dim_1400x900.png)",
+      "Urban street furniture scene (bench/planter/street fixture) in a clean city environment (skyra-application-urban-furniture.dim_1400x900.png)"
+    ],
+    "edits": []
+  }
+}

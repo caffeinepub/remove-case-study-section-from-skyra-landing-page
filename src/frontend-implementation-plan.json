@@ -1,0 +1,89 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Refresh Skyra header branding and metro/buildings/facades/furniture imagery",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the top nav brand area to show “Skyra” text (no logo image) while keeping smooth scroll-to-top on click.",
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/TopNav.tsx`, the logo `<img src=\"/assets/generated/skyra-logo.dim_512x512.png\" ...>` is removed from the navbar brand lockup.",
+        "The navbar brand area visibly shows the text “Skyra” on the upper-left on all screen sizes.",
+        "Clicking the brand area still scrolls the page to the top smoothly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/skyra/TopNav.tsx",
+          "operation": "modify",
+          "description": "Replace the current brand lockup that includes `/assets/generated/skyra-logo.dim_512x512.png` with a text-only “Skyra” treatment, and keep the existing button click handler that smoothly scrolls to the top."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Replace the hero background overlay image with the new outdoor metro station tiles photo, preserving readability in light/dark modes.",
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/HeroSection.tsx`, the background overlay image no longer uses `/assets/generated/skyra-tiles-pattern.dim_1600x900.png` and uses the new generated metro-station image instead.",
+        "The hero section still renders correctly in light/dark modes with legible text over the new background image."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/skyra/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Update the hero overlay image source to use `frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png` instead of `/assets/generated/skyra-tiles-pattern.dim_1600x900.png`, while keeping the existing overlay/opacity structure so text remains legible in light/dark themes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update Applications section card images so each specified category uses its own distinct new photo (no shared tiles pattern).",
+      "acceptanceCriteria": [
+        "In `frontend/src/components/skyra/ApplicationsSection.tsx`, the “Metro & Railway Stations” card image is updated to the new outdoor metro station tiles photo.",
+        "In `frontend/src/components/skyra/ApplicationsSection.tsx`, the “Public Buildings”, “Walls & Facades”, and “Urban Furniture” card images are updated to three distinct new images (not `/assets/generated/skyra-tiles-pattern.dim_1600x900.png`).",
+        "All application card images render without layout shifts and keep the same aspect ratio and hover behavior."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/skyra/ApplicationsSection.tsx",
+          "operation": "modify",
+          "description": "Update the applications data to reference the new generated images: set “Metro & Railway Stations” to `frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png`, “Public Buildings” to `frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png`, “Walls & Facades” to `frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png`, and “Urban Furniture” to `frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png`, preserving the existing aspect ratio and hover scaling classes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add the new generated images under `frontend/public/assets/generated` and reference them directly from React components.",
+      "acceptanceCriteria": [
+        "All new images are present under `frontend/public/assets/generated` with the exact filenames specified in imageRequirements.required.",
+        "The hero and applications sections load the new images via `/assets/generated/...` paths."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset file: `frontend/public/assets/generated/skyra-hero-metro-station.dim_1600x900.png`."
+        },
+        {
+          "path": "frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset file: `frontend/public/assets/generated/skyra-application-metro-outdoor.dim_1400x900.png`."
+        },
+        {
+          "path": "frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset file: `frontend/public/assets/generated/skyra-application-public-buildings.dim_1400x900.png`."
+        },
+        {
+          "path": "frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset file: `frontend/public/assets/generated/skyra-application-walls-facades.dim_1400x900.png`."
+        },
+        {
+          "path": "frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png",
+          "operation": "create",
+          "description": "Add the generated image asset file: `frontend/public/assets/generated/skyra-application-urban-furniture.dim_1400x900.png`."
+        }
+      ]
+    }
+  ]
+}
